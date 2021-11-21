@@ -5,7 +5,7 @@ Its function is to get a list of all API interface names of a certain module.
 ## Install
 
 ```bash
-npm install getwords --save
+npm install @luzhenqian/getwords --save
 ```
 
 ## use
@@ -13,28 +13,28 @@ npm install getwords --save
 If you want to get the API word list of all modules of Node.js:
 
 ```js
-import {getNodejsWords} from "getwords";
+import { getNodejsWords } from "@luzhenqian/getwords";
 console.log(getNodejsWords());
 ```
 
 If you want to get the API word list on the Window object:
 
 ```js
-import {getGlobalWords} from "getwords";
+import { getGlobalWords } from "@luzhenqian/getwords";
 console.log(getGlobalWords());
 ```
 
 If you want to get the API word list of a certain module (it can be a Node.js built-in module or a third-party module):
 
 ```js
-import {getWords} from "getwords";
+import { getWords } from "@luzhenqian/getwords";
 console.log(getWords("vue"));
 ```
 
 If you want to get the API word list of multiple modules (either Node.js built-in modules or third-party modules):
 
 ```js
-import {getWords} from "getwords";
+import { getWords } from "@luzhenqian/getwords";
 console.log(getWords("vue", "axios"));
 ```
 
@@ -47,7 +47,7 @@ This plugin is [eslint-plugin-spellcheck](https://www.npmjs.com/package/eslint-p
 You can add the corresponding configuration in your .eslintrc.js.
 
 ```js
-const {getWords, getGlobalWords} = require("getwords");
+const { getWords, getGlobalWords } = require("@luzhenqian/getwords");
 
 module.exports = {
   // more...

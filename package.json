@@ -1,5 +1,5 @@
 {
-  "name": "getwords",
+  "name": "@luzhenqian/getwords",
   "version": "1.0.0",
   "description": "A get modules api words library",
   "main": "./lib/getwords.cjs.js",
