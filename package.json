@@ -1,11 +1,11 @@
 {
-  "name": "@luzhenqian/getwords",
+  "name": "modules-words",
   "version": "1.0.0",
   "description": "A get modules api words library",
-  "main": "./lib/getwords.cjs.js",
-  "module": "./lib/getwords.esm.js",
+  "main": "./lib/module-words.cjs.js",
+  "module": "./lib/module-words.esm.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rm -rf ./lib && rollup -c"
   },
   "keywords": [
     "getwords",
@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luzhenqian/getwords.git"
+    "url": "https://github.com/luzhenqian/module-words.git"
   },
   "bugs": {
-    "url": "https://github.com/luzhenqian/getwords.git/issues"
+    "url": "https://github.com/luzhenqian/module-words.git/issues"
   },
-  "homepage": "https://github.com/luzhenqian/getwords.git",
+  "homepage": "https://github.com/luzhenqian/module-words.git",
   "files": [
     "/lib"
   ],

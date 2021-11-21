@@ -8,7 +8,7 @@ export default [
     input: "./src/index.ts",
     output: [
       {
-        file: "./lib/getwords.cjs.js",
+        file: "./lib/module-words.cjs.js",
         format: "commonjs",
         exports: "named",
       },
@@ -20,7 +20,7 @@ export default [
     input: "./src/index.ts",
     output: [
       {
-        file: "./lib/getwords.esm.js",
+        file: "./lib/module-words.esm.js",
         format: "esm",
       },
     ],
@@ -31,9 +31,9 @@ export default [
     input: "./src/index.ts",
     output: [
       {
-        file: "./lib/getwords.global.js",
+        file: "./lib/module-words.global.js",
         format: "iife",
-        name: "getwords",
+        name: "moduleWords",
         exports: "named",
       },
     ],
@@ -44,9 +44,9 @@ export default [
     input: "./src/index.ts",
     output: [
       {
-        file: "./lib/getwords.global.prod.js",
+        file: "./lib/module-words.global.prod.js",
         format: "iife",
-        name: "getwords",
+        name: "moduleWords",
         exports: "named",
       },
     ],

@@ -5,7 +5,7 @@ Its function is to get a list of all API interface names of a certain module.
 ## Install
 
 ```bash
-npm install @luzhenqian/getwords --save
+npm install modules-words --save
 ```
 
 ## use
@@ -13,28 +13,28 @@ npm install @luzhenqian/getwords --save
 If you want to get the API word list of all modules of Node.js:
 
 ```js
-import { getNodejsWords } from "@luzhenqian/getwords";
+import { getNodejsWords } from "modules-words";
 console.log(getNodejsWords());
 ```
 
 If you want to get the API word list on the Window object:
 
 ```js
-import { getGlobalWords } from "@luzhenqian/getwords";
+import { getGlobalWords } from "modules-words";
 console.log(getGlobalWords());
 ```
 
 If you want to get the API word list of a certain module (it can be a Node.js built-in module or a third-party module):
 
 ```js
-import { getWords } from "@luzhenqian/getwords";
+import { getWords } from "modules-words";
 console.log(getWords("vue"));
 ```
 
 If you want to get the API word list of multiple modules (either Node.js built-in modules or third-party modules):
 
 ```js
-import { getWords } from "@luzhenqian/getwords";
+import { getWords } from "modules-words";
 console.log(getWords("vue", "axios"));
 ```
 
@@ -47,7 +47,7 @@ This plugin is [eslint-plugin-spellcheck](https://www.npmjs.com/package/eslint-p
 You can add the corresponding configuration in your .eslintrc.js.
 
 ```js
-const { getWords, getGlobalWords } = require("@luzhenqian/getwords");
+const { getWords, getGlobalWords } = require("modules-words");
 
 module.exports = {
   // more...

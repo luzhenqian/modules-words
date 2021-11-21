@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npm install @luzhenqian/getwords --save
+npm install modules-words --save
 ```
 
 ## 使用
@@ -13,28 +13,28 @@ npm install @luzhenqian/getwords --save
 如果你要获取 Node.js 所有模块的 API 单词列表：
 
 ```js
-import { getNodejsWords } from "@luzhenqian/getwords";
+import { getNodejsWords } from "modules-words";
 console.log(getNodejsWords());
 ```
 
 如果你要获取 Window 对象上的 API 单词列表：
 
 ```js
-import { getGlobalWords } from "@luzhenqian/getwords";
+import { getGlobalWords } from "modules-words";
 console.log(getGlobalWords());
 ```
 
 如果你要获取某个模块（可以是 Node.js 内置模块，也可以是第三方模块）的 API 单词列表：
 
 ```js
-import { getWords } from "@luzhenqian/getwords";
+import { getWords } from "modules-words";
 console.log(getWords("vue"));
 ```
 
 如果你要获取多个模块（可以是 Node.js 内置模块，也可以是第三方模块）的 API 单词列表：
 
 ```js
-import { getWords } from "@luzhenqian/getwords";
+import { getWords } from "modules-words";
 console.log(getWords("vue", "axios"));
 ```
 
@@ -47,7 +47,7 @@ console.log(getWords("vue", "axios"));
 你可以在你的 .eslintrc.js 中添加相应的配置。
 
 ```js
-const { getWords, getGlobalWords } = require("@luzhenqian/getwords");
+const { getWords, getGlobalWords } = require("modules-words");
 
 module.exports = {
   // more...
