@@ -1,0 +1,41 @@
+{
+  "name": "getwords",
+  "version": "1.0.0",
+  "description": "A get modules api words library",
+  "main": "./lib/getwords.cjs.js",
+  "module": "./lib/getwords.esm.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "getwords",
+    "getNodejsAPIWords",
+    "getModulesWords",
+    "eslint-plugin",
+    "spellcheck",
+    "spelling"
+  ],
+  "author": "luzhenqian",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luzhenqian/getwords.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luzhenqian/getwords.git/issues"
+  },
+  "homepage": "https://github.com/luzhenqian/getwords.git",
+  "files": [
+    "/lib"
+  ],
+  "engines": {
+    "node": ">= 10"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.9",
+    "rollup": "^2.60.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.0",
+    "typescript": "^4.5.2"
+  }
+}
