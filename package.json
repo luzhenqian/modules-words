@@ -2,8 +2,8 @@
   "name": "modules-words",
   "version": "1.0.0",
   "description": "A get modules api words library",
-  "main": "./lib/module-words.cjs.js",
-  "module": "./lib/module-words.esm.js",
+  "main": "./lib/modules-words.cjs.js",
+  "module": "./lib/modules-words.esm.js",
   "scripts": {
     "build": "rm -rf ./lib && rollup -c"
   },
@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luzhenqian/module-words.git"
+    "url": "https://github.com/luzhenqian/modules-words.git"
   },
   "bugs": {
-    "url": "https://github.com/luzhenqian/module-words.git/issues"
+    "url": "https://github.com/luzhenqian/modules-words.git/issues"
   },
-  "homepage": "https://github.com/luzhenqian/module-words.git",
+  "homepage": "https://github.com/luzhenqian/modules-words.git",
   "files": [
     "/lib"
   ],

@@ -8,7 +8,7 @@ export default [
     input: "./src/index.ts",
     output: [
       {
-        file: "./lib/module-words.cjs.js",
+        file: "./lib/modules-words.cjs.js",
         format: "commonjs",
         exports: "named",
       },
@@ -20,7 +20,7 @@ export default [
     input: "./src/index.ts",
     output: [
       {
-        file: "./lib/module-words.esm.js",
+        file: "./lib/modules-words.esm.js",
         format: "esm",
       },
     ],
@@ -31,9 +31,9 @@ export default [
     input: "./src/index.ts",
     output: [
       {
-        file: "./lib/module-words.global.js",
+        file: "./lib/modules-words.global.js",
         format: "iife",
-        name: "moduleWords",
+        name: "modulesWords",
         exports: "named",
       },
     ],
@@ -44,9 +44,9 @@ export default [
     input: "./src/index.ts",
     output: [
       {
-        file: "./lib/module-words.global.prod.js",
+        file: "./lib/modules-words.global.prod.js",
         format: "iife",
-        name: "moduleWords",
+        name: "modulesWords",
         exports: "named",
       },
     ],
