@@ -7,7 +7,8 @@
   "scripts": {
     "build": "rm -rf ./lib && rollup -c",
     "test": "cross-env TS_NODE_PROJECT='./test/tsconfig.test.json' mocha test/**/**.test.ts",
-    "cover": "nyc --reporter=html pnpm run test"
+    "cover": "nyc --reporter=html pnpm run test",
+    "lint": "eslint --ext .js --ext .ts src/"
   },
   "keywords": [
     "getwords",
@@ -41,8 +42,12 @@
     "@types/lodash": "^4.14.177",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "chai": "^4.3.4",
     "cross-env": "^7.0.3",
+    "eslint": "^8.3.0",
+    "eslint-plugin-spellcheck": "^0.0.19",
     "mocha": "^9.1.3",
     "nyc": "^15.1.0",
     "rollup": "^2.60.0",

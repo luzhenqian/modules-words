@@ -30,7 +30,9 @@ function _getWindowWords(module: string): string[] {
           .forEach((w) => words.add(w));
       });
     }
-  } catch (e) {}
+  } catch (e) {
+    e;
+  }
   return Array.from(words);
 }
 
@@ -52,7 +54,9 @@ function _getWords(module: string): string[] {
         .split("_")
         .forEach((w) => words.add(w));
     });
-  } catch (e) {}
+  } catch (e) {
+    e;
+  }
   return Array.from(words);
 }
 
