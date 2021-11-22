@@ -1,6 +1,16 @@
 import rollup from "rollup";
+import { optimizeLodashImports } from "@optimize-lodash/rollup-plugin";
+import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+
+const basePlugins = [
+  typescript(),
+  commonjs(),
+  nodeResolve(),
+  optimizeLodashImports(),
+];
 
 export default [
   // cjs
@@ -13,7 +23,8 @@ export default [
         exports: "named",
       },
     ],
-    plugins: [typescript()],
+    // external: ["lodash/snakeCase"],
+    plugins: [...basePlugins],
   }),
   // esm
   rollup.defineConfig({
@@ -24,7 +35,8 @@ export default [
         format: "esm",
       },
     ],
-    plugins: [typescript()],
+    // external: ["lodash/snakeCase"],
+    plugins: [...basePlugins],
   }),
   // global
   rollup.defineConfig({
@@ -37,7 +49,8 @@ export default [
         exports: "named",
       },
     ],
-    plugins: [typescript()],
+    // external: ["lodash/snakeCase"],
+    plugins: [...basePlugins],
   }),
   // global prod
   rollup.defineConfig({
@@ -50,6 +63,7 @@ export default [
         exports: "named",
       },
     ],
-    plugins: [typescript(), terser()],
+    // external: ["lodash/snakeCase"],
+    plugins: [...basePlugins, terser()],
   }),
 ];

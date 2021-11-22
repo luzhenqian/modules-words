@@ -2,6 +2,8 @@ This is a very simple library.
 
 Its function is to get a list of all API interface names of a certain module.
 
+English | [简体中文](./README.zh-CN.md)
+
 ## Install
 
 ```bash
@@ -73,12 +75,12 @@ Of course, it can also be used where you want to use it.
 
 ## API
 
-getWords
+#### getWords
 
 Parameters: string ｜...string
 
 Get the API word list of one or more modules.
 
-getGlobalWords
+#### getGlobalWords
 
 Get the API word list of all built-in modules of Node.js, or get all the API word list on the Window object. It will automatically detect the operating platform.

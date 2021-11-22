@@ -2,6 +2,8 @@
 
 它的作用是获取某个模块的所有 API 接口名称列表。
 
+[English](./README.md) | 简体中文
+
 ## 安装
 
 ```bash
@@ -73,12 +75,12 @@ module.exports = {
 
 ## API
 
-getWords
+#### getWords
 
 参数：string ｜...string
 
 获取一个或多个模块的 API 单词列表。
 
-getGlobalWords
+#### getGlobalWords
 
 获取 Node.js 所有内置模块的 API 单词列表，或者获取 Window 对象上的所有 API 单词列表。它会自动检测运行平台。

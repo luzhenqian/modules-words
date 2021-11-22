@@ -1,3 +1,5 @@
+import { snakeCase } from "lodash";
+
 /**
  * is browser
  * @returns boolean
@@ -10,19 +12,26 @@ function isBrowser() {
  * get window object words
  * @returns string[]
  */
-function _getWindowWords(module: string) {
-  const words = [];
+function _getWindowWords(module: string): string[] {
+  const words = new Set<string>();
+  words.add(module);
   try {
     if (
       isBrowser() &&
       module in window &&
       typeof (window as any)[module] === "object"
     ) {
-      const _m = Object.keys((window as any)[module]);
-      words.push(module, ...Object.values(_m));
+      const props = Object.keys((window as any)[module]);
+
+      props.forEach((prop: string) => {
+        words.add(prop);
+        snakeCase(prop)
+          .split("_")
+          .forEach((w) => words.add(w));
+      });
     }
   } catch (e) {}
-  return words;
+  return Array.from(words);
 }
 
 /**
@@ -30,14 +39,21 @@ function _getWindowWords(module: string) {
  * @param {string} module name
  * @returns string[]
  */
-function _getWords(module: string) {
+function _getWords(module: string): string[] {
   if (isBrowser()) return _getWindowWords(module);
-  const words = [];
+  const words = new Set<string>();
+  words.add(module);
   try {
     const _m = require(module);
-    words.push(module, ...Object.keys(_m));
+    const props = Object.keys(_m);
+    props.forEach((prop: string) => {
+      words.add(prop);
+      snakeCase(prop)
+        .split("_")
+        .forEach((w) => words.add(w));
+    });
   } catch (e) {}
-  return words;
+  return Array.from(words);
 }
 
 /**
