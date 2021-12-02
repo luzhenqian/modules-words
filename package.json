@@ -5,6 +5,7 @@
   "main": "./lib/modules-words.cjs.js",
   "module": "./lib/modules-words.esm.js",
   "scripts": {
+    "prepare": "husky install",
     "build": "rm -rf ./lib && rollup -c",
     "test": "cross-env TS_NODE_PROJECT='./test/tsconfig.test.json' mocha test/**/**.test.ts",
     "cover": "nyc --reporter=html pnpm run test",
